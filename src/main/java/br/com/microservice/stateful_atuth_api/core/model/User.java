@@ -37,8 +37,10 @@ public class User {
   private String password;
 
   @CreationTimestamp
+  @Column(nullable = false)
   private LocalDateTime createdAt;
 
   @UpdateTimestamp
+  @Column(nullable = false)
   private LocalDateTime updatedAt;
 }
