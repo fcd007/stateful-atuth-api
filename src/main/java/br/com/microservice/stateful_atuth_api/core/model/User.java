@@ -20,7 +20,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Data
 @RequiredArgsConstructor
 @AllArgsConstructor
-@Table(name = "user", schema = "public")
+@Table(name = "users", schema = "public")
 public class User {
 
   @Id
@@ -37,8 +37,8 @@ public class User {
   private String password;
 
   @CreationTimestamp
-  private LocalDateTime created_at;
+  private LocalDateTime createdAt;
 
   @UpdateTimestamp
-  private LocalDateTime updated_at;
+  private LocalDateTime updatedAt;
 }
