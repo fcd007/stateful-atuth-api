@@ -6,14 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 
 @Entity
 @Builder
@@ -35,12 +31,4 @@ public class User {
 
   @Column(nullable = false)
   private String password;
-
-  @CreationTimestamp
-  @Column(nullable = false)
-  private LocalDateTime createdAt;
-
-  @UpdateTimestamp
-  @Column(nullable = false)
-  private LocalDateTime updatedAt;
 }

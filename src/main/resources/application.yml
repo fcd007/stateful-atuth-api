@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8083}
+  port: ${PORT:8082}
   error:
     include-stacktrace: NEVER
     include-binding-errors: NEVER
@@ -9,17 +9,22 @@ logging:
     org.springframework.security: DEBUG
 spring:
   application:
-    name: microservice-stateless-auth
+    name: microservice-stateful
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${BD_PORT:5433}/${DB_NANE:auth-db}
-    username: ${BD_USER:postgres}
-    password: ${BD_PASSWORD:postgres}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:auth-db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
     tomcat:
-      max-active: 3
+      max-active: 10
+    driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   sql:
     init:
       mode: always
