@@ -1,2 +1,2 @@
-INSERT INTO public.users (id, name, email, password) VALUES (3, 'user.admin', '', '$2a$10$yTsmKK4ybp8LlbcELwMhmeM4ZV5MkTYpf.Y2zmpUDud1ic.WZzXiu');
-INSERT INTO public.users (id, name, email, password) VALUES (4, 'user.test', '', '$2a$10$yTsmKK4ybp8LlbcELwMhmeM4ZV5MkTYpf.Y2zmpUDud1ic.WZzXiu');
+INSERT INTO public.users (id, username, email, password) VALUES (3, 'user.admin', '', '$2a$10$yTsmKK4ybp8LlbcELwMhmeM4ZV5MkTYpf.Y2zmpUDud1ic.WZzXiu');
+INSERT INTO public.users (id, username, email, password) VALUES (4, 'user.test', '', '$2a$10$yTsmKK4ybp8LlbcELwMhmeM4ZV5MkTYpf.Y2zmpUDud1ic.WZzXiu');

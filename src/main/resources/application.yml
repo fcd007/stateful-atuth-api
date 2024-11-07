@@ -30,3 +30,7 @@ spring:
       mode: always
       continue-on-error: true
       platform: postgres
+
+redis:
+  host: ${REDIS_HOST:localhost}
+  port: ${REDIS_PORT:6379}

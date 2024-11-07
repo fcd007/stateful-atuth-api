@@ -1,4 +1,4 @@
-package br.com.microservice.stateful_atuth_api.core.model;
+package br.com.microservice.stateful_atuth_api.domain.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,7 +24,7 @@ public class User {
   private Integer id;
 
   @Column(nullable = false)
-  private String name;
+  private String username;
 
   @Column(nullable = false)
   private String email;
