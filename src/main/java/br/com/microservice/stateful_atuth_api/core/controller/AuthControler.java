@@ -28,7 +28,7 @@ public class AuthControler {
     return ResponseEntity.ok(token);
   }
 
-  @PostMapping("/token/validate-token")
+  @PostMapping("/token/validate")
   public ResponseEntity<TokenDTO> validateToken(@RequestHeader String accessToken) {
     log.info("Request received to validate token");
 
